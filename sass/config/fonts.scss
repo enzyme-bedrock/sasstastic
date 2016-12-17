@@ -2,3 +2,7 @@ $fonts: (
     alpha: "'Oswald', sans-serif",
     bravo: "'Noto Sans', sans-serif",
 );
+
+@function font($key) {
+    @return unquote(map-get($fonts, $key));
+}
