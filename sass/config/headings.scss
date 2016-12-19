@@ -12,10 +12,10 @@ $heading_sizes: (
 @mixin headings {
     @each $selector in $heading_selectors {
         #{$selector} {
+            @content;
+            
             // The specific selector based configurations defined above.
             font-size: map-get($heading_sizes, $selector);
-
-            @content;
         }
     }
 }
